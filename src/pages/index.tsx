@@ -37,10 +37,10 @@ export default function Home() {
 
       setIsLoading(true);
 
-      const response = await axios.post("/api/generate", body);
+      // const response = await axios.post("/api/generate", body);
 
-      const data = await response.data;
-      console.log(data);
+      // const data = await response.data;
+      // console.log(data);
       const text = mockData.result as string;
       const regex1 = /中文名：\s*(.*)\s*\n/; // 匹配中文名
       const chineseName = text.match(regex1)?.[1] || "";
