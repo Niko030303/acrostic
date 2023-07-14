@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production API_BASE_URL=https://api.example.com node server.js",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
