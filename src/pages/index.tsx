@@ -2,8 +2,27 @@ import { Inter } from "next/font/google";
 import { useState, useEffect, useMemo } from "react";
 import BuyMeACoffee from "@/widgets/coffee";
 import axios from "axios";
+import DockBar from "@/widgets/dock-bar";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const list:any[] = [
+  {
+    icon: "ri-github-line",
+    title: "Github",
+    url: "https://www.github.com/Niko030303"
+  },
+  {
+    icon: "ri-twitter-line",
+    title: "Twitter",
+    url: "https://twitter.com/Niko030303"
+  },
+  {
+    icon: "ri-product-hunt-line",
+    title: "Product Hunt",
+    url: "https://www.producthunt.com/@niko030303"
+  }
+]
 
 export default function Home() {
   const [inputName, setInputName] = useState("");
@@ -190,6 +209,7 @@ export default function Home() {
           className="mt-3 w-56"
         />
       </a>
+      <DockBar list={list}/>
     </main>
   );
 }
